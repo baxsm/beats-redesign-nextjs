@@ -1,30 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root,
+.root,
+#root,
+#docs-root {
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media screen and (min-width: 968px) {
+
+  :root,
+  .root,
+  #root,
+  #docs-root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
 }
 
 * {
-  box-sizing: border-box;
+  @apply box-border p-0 m-0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply mt-[3rem] font-body text-normalFontSize bg-[#0f0f10] text-[#bdc0c2] select-none
+}
+
+h1,
+h2,
+h3 {
+  @apply text-[#f2f2f3];
+}
+
+ul {
+  @apply list-none
+}
+
+a {
+  @apply no-underline
+}
+
+button,
+input {
+  @apply border-none outline-none
+}
+
+button {
+  @apply cursor-pointer
+}
+
+img {
+  @apply max-w-full w-auto
+}
+
+.container {
+  @apply max-w-[986px] ml-[1.5rem] mr-[1.5rem]
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    @apply fixed bg-[#0f0f10] top-[-100%] left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s]
   }
-  body {
-    color: white;
-    background: black;
-  }
+}
+
+.nav__link {
+  -webkit-background-clip: text;
+}
+
+.nav__link:hover {
+  -webkit-background-clip: text;
 }
