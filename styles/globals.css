@@ -69,7 +69,7 @@ ul {
 }
 
 a {
-  @apply no-underline;
+  @apply no-underline cursor-pointer;
 }
 
 button,
@@ -86,24 +86,21 @@ img {
 }
 
 .container {
-  @apply max-w-[986px] ml-[1.5rem] mr-[1.5rem];
+  @apply max-w-[986px] pl-[1.5rem] pr-[1.5rem] lg:pl-0 lg:pr-0 lg:ml-auto lg:mr-auto;
 }
 
 @media screen and (max-width: 340px) {
   .container {
-    @apply ml-[1rem] mr-[1rem];
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container {
-    @apply ml-auto mr-auto w-[auto];
+    @apply pl-[1rem] pr-[1rem];
   }
 }
 
 @media screen and (max-width: 767px) {
   .nav__menu {
     @apply fixed bg-bodyColor top-[-100%] left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s];
+  }
+  .nav__menu__show {
+    @apply fixed bg-bodyColor top-0 left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s];
   }
 }
 
