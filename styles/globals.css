@@ -16,6 +16,17 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+
+  --black-color: #0a0a0b;
+  --black-color-alt: #141515;
+  --title-color: #f2f2f3;
+  --text-color: #bdc0c2;
+  --text-color-light: #a2a6a9;
+  --white-color: #fff;
+  --body-color: #0f0f10;
+  --container-color: #181a1b;
+  --scroll-thumb-color: #27292a;
+  --scroll-thumb-color-alt: #313335;
 }
 
 @media screen and (min-width: 968px) {
@@ -44,43 +55,55 @@ html {
 }
 
 body {
-  @apply mt-[3rem] font-body text-normalFontSize bg-[#0f0f10] text-[#bdc0c2] select-none
+  @apply mt-[3rem] font-body text-normalFontSize bg-bodyColor text-textColor select-none;
 }
 
 h1,
 h2,
 h3 {
-  @apply text-[#f2f2f3];
+  @apply text-titleColor;
 }
 
 ul {
-  @apply list-none
+  @apply list-none;
 }
 
 a {
-  @apply no-underline
+  @apply no-underline;
 }
 
 button,
 input {
-  @apply border-none outline-none
+  @apply border-none outline-none;
 }
 
 button {
-  @apply cursor-pointer
+  @apply cursor-pointer;
 }
 
 img {
-  @apply max-w-full w-auto
+  @apply max-w-full w-auto;
 }
 
 .container {
-  @apply max-w-[986px] ml-[1.5rem] mr-[1.5rem]
+  @apply max-w-[986px] ml-[1.5rem] mr-[1.5rem];
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    @apply ml-[1rem] mr-[1rem];
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    @apply ml-auto mr-auto w-[auto];
+  }
 }
 
 @media screen and (max-width: 767px) {
   .nav__menu {
-    @apply fixed bg-[#0f0f10] top-[-100%] left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s]
+    @apply fixed bg-bodyColor top-[-100%] left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s];
   }
 }
 

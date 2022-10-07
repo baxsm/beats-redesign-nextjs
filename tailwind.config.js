@@ -22,6 +22,18 @@ module.exports = {
       smallFontSize: "var(--small-font-size)",
       smallerFontSize: "var(--smaller-font-size)",
     },
+    colors: {
+      blackColor: "var(--black-color)",
+      blackColorAlt: "var(--black-color-alt)",
+      titleColor: "var(--title-color)",
+      textColor: "var(--text-color)",
+      textColorLight: "var(--text-color-light)",
+      whiteColor: "var(--white-color)",
+      bodyColor: "var(--body-color)",
+      containerColor: "var(--container-color)",
+      scrollThumbColor: "var(--scroll-thumb-color)",
+      scrollThumbColorAlt: "var(--scroll-thumb-color-alt)",
+    },
     plugins: [],
   }
 }
