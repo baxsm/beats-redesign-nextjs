@@ -24,6 +24,7 @@ export default function Header() {
 
     const handleClick = (href) => {
         setActiveLink(href);
+        setNavMenuActive(null);
     }
 
     const navOpen = () => {
