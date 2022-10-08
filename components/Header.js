@@ -36,28 +36,28 @@ export default function Header() {
     }
 
     return (
-        <header className={styles.header} id="header">
-            <nav className={styles.nav + " container"}>
-                <a href="#" className={styles.nav__logo}>
+        <header className="header" id="header">
+            <nav className="nav container">
+                <a href="#" className="nav__logo">
                     <img src="https://i.ibb.co/kDTwh5q/logo.png" alt="" />
                 </a>
-                <div className={navMenuActive ? 'nav__menu__show' : 'nav__menu'} id="nav-menu">
-                    <ul className={styles.nav__list}>
+                <div className={navMenuActive ? 'nav__menu show-menu' : 'nav__menu'} id="nav-menu">
+                    <ul className="nav__list">
                         {
                             navLinks.map((link, index) => {
                                 return (
-                                    <li className={styles.nav__item} key={index}>
-                                        <a className={activeLink == link.path ? styles.active__link : styles.nav__link} onClick={() => handleClick(link.path)}>{link.name}</a>
+                                    <li className="nav__item" key={index}>
+                                        <a className={activeLink == link.path ? 'active-link nav__link' : 'nav__link'} onClick={() => handleClick(link.path)}>{link.name}</a>
                                     </li>
                                 );
                             })
                         }
                     </ul>
-                    <div className={styles.nav__close} id="nav-close">
+                    <div className="nav__close" id="nav-close">
                         <i className="ri-close-line" onClick={navClose}></i>
                     </div>
                 </div>
-                <div className={styles.nav__toggle} id="nav-toggle">
+                <div className="nav__toggle" id="nav-toggle">
                     <i className="ri-function-line" onClick={navOpen}></i>
                 </div>
             </nav>

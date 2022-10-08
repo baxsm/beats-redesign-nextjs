@@ -69,45 +69,18 @@ ul {
 }
 
 a {
-  @apply no-underline cursor-pointer;
+  @apply decoration-0 cursor-pointer no-underline
 }
 
 button,
 input {
-  @apply border-none outline-none;
+  @apply border-none outline-none focus:outline-none focus:border-none
 }
 
 button {
-  @apply cursor-pointer;
+  @apply cursor-pointer
 }
 
 img {
-  @apply max-w-full w-auto;
-}
-
-.container {
-  @apply max-w-[986px] pl-[1.5rem] pr-[1.5rem] lg:pl-0 lg:pr-0 lg:ml-auto lg:mr-auto;
-}
-
-@media screen and (max-width: 340px) {
-  .container {
-    @apply pl-[1rem] pr-[1rem];
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    @apply fixed bg-bodyColor top-[-100%] left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s];
-  }
-  .nav__menu__show {
-    @apply fixed bg-bodyColor top-0 left-0 w-full pt-[4rem] pl-0 pr-0 pb-[3rem] duration-[0.4s];
-  }
-}
-
-.nav__link {
-  -webkit-background-clip: text;
-}
-
-.nav__link:hover {
-  -webkit-background-clip: text;
+  @apply max-w-full h-auto
 }
