@@ -1,13 +1,16 @@
+import { RevealList } from 'next-reveal'
 import React from 'react'
 
 export default function Footer() {
     return (
         <footer className="footer section">
             <div className="footer__container container grid">
-                <a href="#" className="footer__logo">
-                    <img src="https://i.ibb.co/kDTwh5q/logo.png" alt="" />
-                </a>
-                <div className="footer__content">
+                <RevealList delay={600} distance='60px' duration={2500} origin="top" interval={100}>
+                    <a href="#" className="footer__logo">
+                        <img src="https://i.ibb.co/kDTwh5q/logo.png" alt="" />
+                    </a>
+                </RevealList>
+                <RevealList delay={600} distance='60px' duration={2500} origin="top" interval={100} className="footer__content">
                     <h3 className="footer__title">Products</h3>
                     <ul className="footer__links">
                         <li>
@@ -23,8 +26,8 @@ export default function Footer() {
                             <a className="footer__link">Accesories</a>
                         </li>
                     </ul>
-                </div>
-                <div className="footer__content">
+                </RevealList>
+                <RevealList delay={600} distance='60px' duration={2500} origin="top" interval={100} className="footer__content">
                     <h3 className="footer__title">Support</h3>
                     <ul className="footer__links">
                         <li>
@@ -40,8 +43,8 @@ export default function Footer() {
                             <a className="footer__link">Provides</a>
                         </li>
                     </ul>
-                </div>
-                <div className="footer__content">
+                </RevealList>
+                <RevealList delay={600} distance='60px' duration={2500} origin="top" interval={100} className="footer__content">
                     <form action="" className="footer__form">
                         <input type="email" placeholder="Email" className="footer__input" />
                         <button className="button button--flex">
@@ -59,13 +62,15 @@ export default function Footer() {
                             <i className="ri-twitter-line"></i>
                         </a>
                     </div>
-                </div>
+                </RevealList>
             </div>
-            <p className="footer__copy">
-                <a href="https://github.com/baxsm" className="footer__copy-link" target="_blank">
-                    &#169; BAXSM. All Rights Reserved
-                </a>
-            </p>
+            <RevealList delay={600} distance='60px' duration={2500} origin="top" interval={100}>
+                <p className="footer__copy">
+                    <a href="https://github.com/baxsm" className="footer__copy-link" target="_blank">
+                        &#169; BAXSM. All Rights Reserved
+                    </a>
+                </p>
+            </RevealList>
         </footer>
     )
 }

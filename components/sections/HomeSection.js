@@ -1,23 +1,22 @@
 import React from 'react'
+import { RevealWrapper } from 'next-reveal'
 
 export default function HomeSection() {
 
-    const styles = {
-        home__img: 'home__img w-[250px] absolute top-[-16rem] r-[1.5rem]'
-    }
-
-  return (
-    <section className="home section" id="home">
+    return (
+        <section className="home section" id="home">
             <div className="home__container container grid">
-                <div>
-                    <img className={styles.home__img} src="https://i.ibb.co/dBbJ4vJ/home.png" alt="" />
-                </div>
+                <RevealWrapper delay={900} distance='60px' duration={2500} origin="top">
+                    <img className='home__img' src="https://i.ibb.co/dBbJ4vJ/home.png" alt="" />
+                </RevealWrapper>
                 <div className="home__data">
-                    <div className="home__header">
-                        <h1 className="home__title">On ear</h1>
-                        <h2 className="home__subtitle">Beats 3</h2>
-                    </div>
-                    <div className="home__footer">
+                    <RevealWrapper delay={600} distance='60px' duration={2500} origin="bottom">
+                        <div className="home__header">
+                            <h1 className="home__title">On ear</h1>
+                            <h2 className="home__subtitle">Beats 3</h2>
+                        </div>
+                    </RevealWrapper>
+                    <RevealWrapper delay={700} distance='60px' duration={2500} origin="bottom" className="home__footer">
                         <h3 className="home__title-description">Overview</h3>
                         <p className="home__description">
                             Enjoy award-winning Beats sound with wireless listening freedom and a sleek,
@@ -29,9 +28,10 @@ export default function HomeSection() {
                             </span>
                             <span className="home__price">$299</span>
                         </a>
-                    </div>
+                    </RevealWrapper>
+
                 </div>
             </div>
         </section>
-  )
+    )
 }
