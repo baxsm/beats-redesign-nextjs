@@ -22,6 +22,14 @@ export default function Header() {
         setNavMenuActive(null);
     }
 
+    useEffect(() => {
+        document.querySelectorAll('.nav__list a').forEach(e => {
+            e.addEventListener('click', () => {
+                document.querySelector('' + e.getAttribute('data-href')).scrollIntoView();
+            });
+        });
+    }, [])
+
     return (
         <header className="header" id="header">
             <nav className="nav container">
