@@ -1,5 +1,4 @@
-import React from 'react'
-import { RevealWrapper, RevealList } from 'next-reveal'
+import { RevealWrapper, RevealList } from 'next-reveal';
 
 export default function ProductsSection() {
     return (

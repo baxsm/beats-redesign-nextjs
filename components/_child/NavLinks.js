@@ -1,5 +1,3 @@
-import NavLinks from "./NavLinks";
-
 export const navLinks = [
   { name: "Home", 
    path: "#home" 

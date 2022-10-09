@@ -1,5 +1,4 @@
-import { RevealList } from 'next-reveal'
-import React from 'react'
+import { RevealList } from 'next-reveal';
 
 export default function SponsorSection() {
     return (

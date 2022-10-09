@@ -1,6 +1,4 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { navLinks } from './_child/NavLinks';
 
 export default function Header() {
@@ -26,6 +24,7 @@ export default function Header() {
         document.querySelectorAll('.nav__list a').forEach(e => {
             e.addEventListener('click', () => {
                 document.querySelector('' + e.getAttribute('data-href')).scrollIntoView();
+                handleClick(e.getAttribute('data-href') + '');
             });
         });
     }, [])
@@ -42,7 +41,7 @@ export default function Header() {
                             navLinks.map((link, index) => {
                                 return (
                                     <li className="nav__item" key={index}>
-                                        <a data-href={link.path} className={activeLink == link.path ? 'active-link nav__link' : 'nav__link'} onClick={() => handleClick(link.path)}>{link.name}</a>
+                                        <a data-href={link.path} className={activeLink == link.path ? 'active-link nav__link' : 'nav__link'}>{link.name}</a>
                                     </li>
                                 );
                             })

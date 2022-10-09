@@ -1,4 +1,3 @@
-import React from 'react'
 import HomeSection from './sections/HomeSection'
 import SponsorSection from './sections/SponsorSection'
 import SpecsSection from './sections/SpecsSection'

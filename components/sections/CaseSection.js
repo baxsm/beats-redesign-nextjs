@@ -1,4 +1,4 @@
-import { RevealWrapper } from 'next-reveal'
+import { RevealWrapper } from 'next-reveal';
 
 export default function CaseSection() {
     return (
