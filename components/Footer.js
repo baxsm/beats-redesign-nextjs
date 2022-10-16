@@ -51,13 +51,13 @@ export default function Footer() {
                         </button>
                     </form>
                     <div className="footer__social">
-                        <a href="https://facebook.com/" className="footer__social-link" target="_blank">
+                        <a href="https://facebook.com/" className="footer__social-link" target="_blank" rel="noreferrer">
                             <i className="ri-facebook-fill"></i>
                         </a>
-                        <a href="https://instagram.com/" className="footer__social-link" target="_blank">
+                        <a href="https://instagram.com/" className="footer__social-link" target="_blank" rel="noreferrer">
                             <i className="ri-instagram-line"></i>
                         </a>
-                        <a href="https://twitter.com/" className="footer__social-link" target="_blank">
+                        <a href="https://twitter.com/" className="footer__social-link" target="_blank" rel="noreferrer">
                             <i className="ri-twitter-line"></i>
                         </a>
                     </div>
@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
             <RevealList delay={600} distance='60px' duration={2500} origin="top" interval={100}>
                 <p className="footer__copy">
-                    <a href="https://github.com/baxsm" className="footer__copy-link" target="_blank">
+                    <a href="https://github.com/baxsm" className="footer__copy-link" target="_blank" rel="noreferrer">
                         &#169; BAXSM. All Rights Reserved
                     </a>
                 </p>
